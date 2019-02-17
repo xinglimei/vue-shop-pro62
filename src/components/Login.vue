@@ -31,8 +31,8 @@ export default {
   data() {
     return {
       loginForm: {
-        username: "",
-        password: ""
+        username: "admin",
+        password: "123456"
       },
       //   校验规则
       loginFormRules: {
@@ -48,7 +48,7 @@ export default {
     log() {
       //对登陆的form表单进行整体校验
       //this.$refs.loginFormRef.validate(function(valid){})
-      this.$refs.loginFormRef.validate(async  valid => {
+      this.$refs.loginFormRef.validate(async valid => {
         if (valid === true) {
           //valid：ture校验成功
           const { data: res } = await this.$http.post(
